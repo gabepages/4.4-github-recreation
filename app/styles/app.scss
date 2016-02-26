@@ -35,6 +35,10 @@ img {
     margin: 0 12px 0 0;
     vertical-align: bottom;
     width: 28px;
+    color: black;
+    &:hover{
+        color: rgba(61, 118, 194, 1);
+    }
   }
 }
 #search-area{
@@ -57,6 +61,9 @@ img {
       text-decoration: none;
       color: rgba(50, 51, 51, 1);
       font-weight: 500;
+      &:hover{
+        color: rgba(61, 118, 194, 1);
+      }
     }
   }
 }
@@ -192,6 +199,9 @@ img {
   li{
     a{
       color: rgba(102, 102, 102, 1);
+      &:hover{
+        color: rgba(102, 102, 102, 1);
+      }
       span{
         padding-right:5px;
       }

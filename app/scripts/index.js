@@ -1,7 +1,9 @@
 var $ = require('jquery');
 var _ = require('underscore');
 var handlebars = require('handlebars');
+var moment = require('moment');
 var githubtoken = require('./githubtoken.js').token;
+
 
 if(typeof(githubtoken) !== "undfined"){
   $.ajaxSetup({
@@ -38,7 +40,7 @@ $.getJSON(userUrl,function(data){
 });
 
 $.getJSON(userRepoUrl,function(data){
-
+  console.log(data);
   data = orderedData(data);
   var source = $('#repo').html();
   var templateSource = handlebars.compile(source);
@@ -52,6 +54,11 @@ function orderedData(data){
     return data.pushed_at;
   });
 data = data.reverse();
+data = _.map(data,function(data){
+var updateAgo = new Date(data.pushed_at);
+data.pushed_at = moment(updateAgo).startOf('minute').fromNow();
+return data
+});
 return data;
 }
 

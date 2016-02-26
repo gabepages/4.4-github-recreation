@@ -5832,7 +5832,10 @@ img {
   .heading-left span {
     margin: 0 12px 0 0;
     vertical-align: bottom;
-    width: 28px; }
+    width: 28px;
+    color: black; }
+    .heading-left span:hover {
+      color: #3d76c2; }
 
 #search-area {
   display: inline-block;
@@ -5853,6 +5856,8 @@ img {
       text-decoration: none;
       color: #323333;
       font-weight: 500; }
+      #nav-ul li a:hover {
+        color: #3d76c2; }
 
 .heading-right {
   padding-right: 14px;
@@ -5949,6 +5954,8 @@ img {
 
 .nav-for-content li a {
   color: #666666; }
+  .nav-for-content li a:hover {
+    color: #666666; }
   .nav-for-content li a span {
     padding-right: 5px; }
 

@@ -13,18 +13,18 @@
       <div class="row header">
         <div class="heading">
           <div class="heading-left">
-            <span class="mega-octicon octicon-mark-github"></span>
+            <a href="https://github.com/"><span class="mega-octicon octicon-mark-github"></span></a>
             <input id='search-area' type="text" class="form-control" placeholder="Search GitHub">
             <ul id='nav-ul'>
-              <li><a href="">Pull Request</a></li>
-              <li><a href="">Issues</a></li>
-              <li><a href="">Gist</a></li>
+              <li><a href="https://github.com/pulls">Pull Request</a></li>
+              <li><a href="https://github.com/issues">Issues</a></li>
+              <li><a href="https://gist.github.com/">Gist</a></li>
             </ul>
           </div>
           <div class="heading-right">
             <ul class="nav-icons-list">
               <li>
-                <a href="">
+                <a href="https://github.com/notifications">
                   <span class="octicon octicon-bell"></span>
                 </a>
               </li>
@@ -97,7 +97,7 @@
     <script id="side-bar-content" type="text/x-handlebars-template">
 
         <div class="image">
-          <img src="{{avatar_url}}" alt="">
+          <a href="https://github.com/settings/profile"><img src="{{avatar_url}}" alt=""></a>
         </div>
         <div class='user-name'>
           <h1>{{name}}</h1>
@@ -107,7 +107,7 @@
           <ul>
             <li>
               <span class="octicon octicon-mail"></span>
-              <p id="email">{{email}}</p>
+              <a href="mailto:{{email}}"><p id="email">{{email}}</p></a>
             </li>
             <li>
               <span class="octicon octicon-clock"></span>
@@ -149,7 +149,7 @@
           <span class="octicon octicon-git-branch"></span> {{forks_count}}
         </li>
       </ul>
-      <p>Updated 7</p>
+      <p>Updated {{pushed_at}}</p>
       {{/each}}
     </script>
     <script src="js/bundle.js"></script>
