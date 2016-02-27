@@ -34,7 +34,23 @@
                   <span class="caret"></span>
                 </a>
               </li>
-              <li class="profile-pic"></li>
+              <li class="account-box">
+                <a class='profile-pic' href="">
+
+                </a>
+                <ul class="hide-it sort-list">
+                  <li class='signed-in-as'></li>
+                  <div id="mid-sec">
+                    <li id='profile' class='hidden-list'>Your Profile</li>
+                    <li id='stars'class='hidden-list'>Your Stars</li>
+                    <li id='explore'class='hidden-list'>Explore</li>
+                    <li id='integrate'class='hidden-list'>Integrations</li>
+                    <li id='help'class='hidden-list'>Help</li>
+                  </div>
+                  <li id='settings' class='hidden-list2'>Settings</li>
+                  <li class='hidden-list2'>Sign Out</li>
+                </ul>
+              </li>
             </ul>
           </div>
         </div>
@@ -44,12 +60,16 @@
     <div class="container">
       <div class="row content">
 
-        <div class="col-md-3 side-col"></div>
+        <div class="col-md-3 side-col">
+          <div class="orgs"></div>
+        </div>
 
         <div class="col-md-9">
-          <button class="edit-pro btn-defult btn" type="button" name="button">
-            <span class="octicon octicon-pencil"></span>Edit Profile
-          </button>
+          <a id='edit-pro' href="https://github.com/settings/profile">
+            <button class="edit-pro btn-defult btn" type="button" name="button">
+              <span class="octicon octicon-pencil"></span>Edit Profile
+            </button>
+          </a>
           <ul class="nav nav-tabs nav-for-content">
             <li role="presentation">
               <a href="#">
@@ -68,15 +88,15 @@
             </li>
           </ul>
           <div class="second-row">
-            <input type="text" class="form-control" placeholder="Find a Repository...">
+            <input type="text" class="form-control search-repo" placeholder="Find a Repository...">
             <button id='search-but' type="submit" class="btn btn-default">Search</button>
             <ul class='repo-type'>
-              <li id='black'><a href="">All</a></li>
-              <li><a href="">Public</a></li>
-              <li><a href="">Private</a></li>
-              <li><a href="">Sources</a></li>
-              <li><a href="">Forks</a></li>
-              <li><a href="">Mirrors</a></li>
+              <li id='all' class='active'><a href="">All</a></li>
+              <li id='public'><a href="#">Public</a></li>
+              <li id='private'><a href="#">Private</a></li>
+              <li id='sources'><a href="#">Sources</a></li>
+              <li id='forks'><a href="#">Forks</a></li>
+              <li id='mirrors'><a href="#">Mirrors</a></li>
             </ul>
             <button id='green-button' type="submit" class="btn btn-default">
               <span class="octicon octicon-repo"></span>New
@@ -89,10 +109,11 @@
     </div>
 
     <script id="profile-pic" type="text/x-handlebars-template">
-      <a href="">
         <img src="{{avatar_url}}" alt="">
         <span class="caret"></span>
-      </a>
+    </script>
+    <script id="login-name" type="text/x-handlebars-template">
+      <p>Signed in as <span>{{login}}</span></p>
     </script>
     <script id="side-bar-content" type="text/x-handlebars-template">
 
@@ -117,25 +138,26 @@
         </div>
         <div class="following">
           <div class='following-list'>
-            <a href="{{followers_url}}">
+            <a href="https://github.com/{{login}}/followers">
               <strong>{{followers}}</strong>
               <span>Followers</span>
             </a>
-            <a href="{{starred_url}}">
+            <a href="https://github.com/stars">
               <strong>0</strong>
               <span>Starred</span>
             </a>
-            <a href="{{following_url}}">
+            <a href="https://github.com/{{login}}/following">
               <strong>{{following}}</strong>
               <span>Following</span>
             </a>
           </div>
         </div>
-        <div class="organizations">
-          <h1>Organizations</h1>
-        </div>
-
-
+    </script>
+    <script id='orgs' type='text/x-handlebars-template'>
+      <div class="organizations">
+        <h1>Organizations</h1>
+        <a href="{{url.html_url}}"><img src="{{avatar_url}}" alt=""></a>
+      </div>
     </script>
     <script id="repo" type="text/x-handlebars-template">
       {{#each repo}}

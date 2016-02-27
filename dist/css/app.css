@@ -5878,6 +5878,52 @@ img {
         color: #323333; }
         .heading-right .nav-icons-list li a:hover {
           color: #3d76c2; }
+  .heading-right .sort-list {
+    text-align: left;
+    display: block;
+    z-index: 100;
+    position: absolute;
+    font-size: 12px;
+    left: 1033px;
+    top: 43px;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #e1e3df;
+    padding: 5px 0 5px 0;
+    clear: both; }
+    .heading-right .sort-list #mid-sec {
+      border-bottom: 1px solid #e5e5e5; }
+    .heading-right .sort-list .signed-in-as p {
+      border-bottom: 1px solid #e5e5e5;
+      margin-left: 0;
+      list-style: none;
+      cursor: pointer;
+      padding: 5px 20px 5px 10px;
+      color: #767676; }
+    .heading-right .sort-list .signed-in-as span {
+      color: #767676; }
+    .heading-right .sort-list .hidden-list {
+      margin-left: 0;
+      display: block;
+      list-style: none;
+      cursor: pointer;
+      padding: 5px 0px 5px 10px;
+      color: #232323; }
+      .heading-right .sort-list .hidden-list:hover {
+        background-color: #3d76c2;
+        color: white; }
+    .heading-right .sort-list .hidden-list2 {
+      margin-left: 0;
+      display: block;
+      list-style: none;
+      cursor: pointer;
+      padding: 5px 0px 5px 10px;
+      color: #232323; }
+      .heading-right .sort-list .hidden-list2:hover {
+        background-color: #3d76c2;
+        color: white; }
+  .heading-right .hide-it {
+    display: none; }
 
 .content {
   padding-top: 20px; }
@@ -5959,6 +6005,10 @@ img {
   .nav-for-content li a span {
     padding-right: 5px; }
 
+#edit-pro {
+  text-decoration: none;
+  color: black; }
+
 .edit-pro {
   background-color: #f8f8f8;
   float: right;
@@ -5999,7 +6049,7 @@ img {
       list-style: none; }
       .second-row .repo-type li a {
         text-decoration: none; }
-    .second-row .repo-type #black a {
+    .second-row .repo-type .active a {
       text-decoration: none;
       color: black;
       font-weight: bold; }
@@ -6015,7 +6065,6 @@ img {
       margin-right: 4px; }
 
 .repo {
-  border-bottom: 1px solid #dddddd;
   font-family: Helvetica; }
   .repo h1 {
     margin-top: 35px;
@@ -6026,7 +6075,8 @@ img {
   .repo p {
     font-size: 13px;
     color: #888888;
-    margin-bottom: 35px; }
+    padding-bottom: 35px;
+    border-bottom: 1px solid #dddddd; }
   .repo ul {
     float: right;
     list-style: none; }
