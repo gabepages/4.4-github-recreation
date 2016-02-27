@@ -92,6 +92,32 @@ img {
       }
     }
   }
+  .sort-list-repo{
+    text-align: left;
+    display: block;
+      z-index: 100;
+      position: absolute;
+      font-size: 12px;
+      left: 985px;
+      top: 44px;
+      list-style: none;
+      background-color: white;
+      border: 1px solid rgba(225, 227, 223, 1);
+      padding: 5px 0 5px 0;
+      clear: both;
+      .hidden-list-repo{
+        margin-left: 0;
+        display: block;
+         list-style: none;
+         cursor: pointer;
+         padding: 5px 50px 5px 10px;
+         color: rgba(35, 35, 35, 1);
+         &:hover{
+           background-color: rgba(61, 118, 194, 1);
+           color: white;
+         }
+      }
+  }
 
   .sort-list{
     text-align: left;
@@ -223,7 +249,7 @@ img {
       width:60px;
       display: inline-block;
       text-align: center;
-      margin: 0 5px 0 5px;
+      margin: 0 10px 0 5px;
       text-decoration: none;
       &:hover{
         strong{
@@ -323,7 +349,7 @@ img {
         text-decoration: none;
       }
     }
-    .active{
+    .dark{
       a{
       text-decoration: none;
       color: black;

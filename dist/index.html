@@ -29,10 +29,14 @@
                 </a>
               </li>
               <li>
-                <a href="">
+                <a class='new-repo-tab' href="">
                   <span class="octicon octicon-plus"></span>
                   <span class="caret"></span>
                 </a>
+                <ul class="hide-it sort-list-repo">
+                  <li id='create-repo' class='hidden-list-repo'>New Repository</li>
+                  <li id='create-org' class='hidden-list-repo'>New Organization</li>
+                </ul>
               </li>
               <li class="account-box">
                 <a class='profile-pic' href="">
@@ -70,18 +74,18 @@
               <span class="octicon octicon-pencil"></span>Edit Profile
             </button>
           </a>
-          <ul class="nav nav-tabs nav-for-content">
-            <li role="presentation">
+          <ul class="nav nav-tabs nav-for-content repo-tabs">
+            <li role="presentation" id='cons'>
               <a href="#">
                 <span class="octicon octicon-diff-added"></span>Contrabutions
               </a>
             </li>
-            <li role="presentation" class="active">
+            <li role="presentation" class="active" id='repos'>
               <a href="#">
                 <span class="octicon octicon-repo"></span>Repositories
               </a>
             </li>
-            <li role="presentation">
+            <li role="presentation" id='public-active'>
               <a href="#">
                 <span class="octicon octicon-rss"></span>Public Activity
               </a>
@@ -91,7 +95,7 @@
             <input type="text" class="form-control search-repo" placeholder="Find a Repository...">
             <button id='search-but' type="submit" class="btn btn-default">Search</button>
             <ul class='repo-type'>
-              <li id='all' class='active'><a href="">All</a></li>
+              <li id='all' class='dark'><a href="">All</a></li>
               <li id='public'><a href="#">Public</a></li>
               <li id='private'><a href="#">Private</a></li>
               <li id='sources'><a href="#">Sources</a></li>

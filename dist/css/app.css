@@ -5878,6 +5878,29 @@ img {
         color: #323333; }
         .heading-right .nav-icons-list li a:hover {
           color: #3d76c2; }
+  .heading-right .sort-list-repo {
+    text-align: left;
+    display: block;
+    z-index: 100;
+    position: absolute;
+    font-size: 12px;
+    left: 985px;
+    top: 44px;
+    list-style: none;
+    background-color: white;
+    border: 1px solid #e1e3df;
+    padding: 5px 0 5px 0;
+    clear: both; }
+    .heading-right .sort-list-repo .hidden-list-repo {
+      margin-left: 0;
+      display: block;
+      list-style: none;
+      cursor: pointer;
+      padding: 5px 50px 5px 10px;
+      color: #232323; }
+      .heading-right .sort-list-repo .hidden-list-repo:hover {
+        background-color: #3d76c2;
+        color: white; }
   .heading-right .sort-list {
     text-align: left;
     display: block;
@@ -5980,7 +6003,7 @@ img {
     width: 60px;
     display: inline-block;
     text-align: center;
-    margin: 0 5px 0 5px;
+    margin: 0 10px 0 5px;
     text-decoration: none; }
     .following .following-list a:hover strong {
       color: #3d76c2; }
@@ -6049,7 +6072,7 @@ img {
       list-style: none; }
       .second-row .repo-type li a {
         text-decoration: none; }
-    .second-row .repo-type .active a {
+    .second-row .repo-type .dark a {
       text-decoration: none;
       color: black;
       font-weight: bold; }
