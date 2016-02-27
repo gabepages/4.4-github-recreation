@@ -2,16 +2,16 @@ var $ = require('jquery');
 var _ = require('underscore');
 var handlebars = require('handlebars');
 var moment = require('moment');
-var githubtoken = require('./githubtoken.js').token;
+// var githubtoken = require('./githubtoken.js').token;
 
-
-if(typeof(githubtoken) !== "undfined"){
-  $.ajaxSetup({
-    headers: {
-      'Authorization': 'token ' + githubtoken,
-    }
-  });
-}
+// 
+// if(typeof(githubtoken) !== "undfined"){
+//   $.ajaxSetup({
+//     headers: {
+//       'Authorization': 'token ' + githubtoken,
+//     }
+//   });
+// }
 
 var myUser = 'gabepages';
 var userUrl = 'https://api.github.com/users/' + myUser;
